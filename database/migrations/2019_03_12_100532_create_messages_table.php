@@ -17,9 +17,10 @@ class CreateMessagesTable extends Migration
             $table->increments('id');
             $table->string('text');
             $table->integer('user_id');
-            $table->integer('game_id');
-            $table->integer('order');
-            $table->string('optional_parameter');
+            $table->integer('group_id');
+            $table->integer('game_id')->nullable();
+            $table->integer('order')->nullable();
+            $table->string('optional_parameter')->nullable();;
             $table->timestamps();
         });
     }

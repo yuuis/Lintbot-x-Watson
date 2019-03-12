@@ -16,8 +16,9 @@ class CreateLineLogsTable extends Migration
         Schema::create('line_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('text');
-            $table->integer('');
+            $table->integer('group_id');
+            $table->string('text');
+            $table->string('tag')->nullable();
             $table->timestamps();
         });
     }
