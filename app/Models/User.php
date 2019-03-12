@@ -1,15 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yuuis
- * Date: 2019/03/12
- * Time: 19:44
- */
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 
-class User
+class User extends Model
 {
+    protected $fillable = ['name', 'userId'];
 
+    public function messages()
+    {
+        return $this->hasMany('App\Models\Message');
+    }
+
+    public function lineLogs()
+    {
+        return $this->hasMany('App\Models\LineLog');
+    }
 }
