@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    protected $fillable = ['majority_word_id', 'minority_word_id', 'group_id', 'game_status_id'];
+    protected $fillable = ['majority_word_id', 'wolf_word_id', 'group_id', 'game_status_id'];
 
     public function group()
     {
@@ -20,7 +20,7 @@ class Game extends Model
 
     public function minorityWord()
     {
-        return $this->belongsTo('App\Models\Word', 'minority_word_id');
+        return $this->belongsTo('App\Models\Word', 'wolf_word_id');
     }
 
     public function status()

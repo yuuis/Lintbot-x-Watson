@@ -19,7 +19,6 @@ class CreateMessagesTable extends Migration
             $table->integer('user_id');
             $table->integer('group_id');
             $table->integer('game_id')->nullable();
-            $table->integer('order')->nullable();
             $table->string('optional_parameter')->nullable();;
             $table->timestamps();
         });

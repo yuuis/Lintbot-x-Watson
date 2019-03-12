@@ -17,4 +17,9 @@ class User extends Model
     {
         return $this->hasMany('App\Models\LineLog');
     }
+
+    public function groups()
+    {
+        return $this->belongsToMany('App\Models\Group');
+    }
 }
